@@ -1,0 +1,96 @@
+html {
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+th {
+    width: 33.33%;
+    text-align: center;
+}
+
+td {
+    text-align: center;
+}
+
+form {
+    margin-left: 25px;
+}
+
+#title {
+    text-align: center;
+    font-size: 96px;
+    font-family: "Century Gothic",serif;
+}
+
+#game {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.openbtn {
+    position: absolute;
+    top: 25px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+}
+
+.sidebar {
+    height: 100%;
+    width: 450px;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: -450px;
+    background-color: #e9ecef;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+
+.display-ib {
+    float: left;
+}
+
+.table {
+    width: 800px;
+    border: #dee2e6 2px solid;
+}
+
+tbody tr:hover {
+    background-color: lightcoral;
+    cursor: pointer;
+}
+
+.jumbotron, .jumbotron-fluid {
+    margin-bottom: 0;
+}
+
+.display-4 {
+    margin-bottom: 25px;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}

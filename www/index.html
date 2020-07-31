@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hello wasm-pack!</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+  </head>
+  <body>
+    <div id="mySidebar" class="sidebar">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeInstructions()">×</a>
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="display-4">Instructions</h1>
+          <p class="lead">• Press "r" to restart the simulation</p>
+          <p class="lead">• Click an item from the table to remove the rule</p>
+          <p class="lead"></p>
+        </div>
+      </div>
+    </div>
+
+    <button class="openbtn" onclick="openInstructions()">☰ Open Instructions</button>
+
+    <h1 id="title">The Game Of Life</h1>
+
+    <div id="game">
+      <pre id="game_of_life_canvas"></pre>
+    </div>
+
+    <div class="center">
+      <div class="display-ib">
+        <table class="table table-hover">
+          <thead>
+          <tr>
+            <th scope="col">From State</th>
+            <th scope="col">To State</th>
+            <th scope="col">When x Neighbours</th>
+          </tr>
+          </thead>
+          <tbody id="data_table">
+
+          </tbody>
+        </table>
+      </div>
+
+      <form class="display-ib">
+        <div class="form-group">
+          <label class="mr-sm-2" for="fromState">From State</label>
+          <select class="custom-select mr-sm-2" id="fromState">
+            <option selected value="1">Alive</option>
+            <option value="2">Dead</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="mr-sm-2" for="toState">To State</label>
+          <select class="custom-select mr-sm-2" id="toState">
+            <option selected value="1">Alive</option>
+            <option value="2">Dead</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="condition">When x Neighbours</label>
+          <input class="form-control" id="condition" placeholder="condition">
+        </div>
+        <button type="button" id="addRuleBtn" class="btn btn-primary">Add Rule</button>
+      </form>
+    </div>
+
+    <script src="./bootstrap.js"></script>
+
+    <!-- script for instruction -->
+    <script>
+      function openInstructions() {
+        document.getElementById("mySidebar").style.left = "0px";
+      }
+
+      function closeInstructions() {
+        document.getElementById("mySidebar").style.left = "-450px";
+      }
+    </script>
+  </body>
+</html>
